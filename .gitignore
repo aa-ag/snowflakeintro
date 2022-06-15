@@ -2,7 +2,9 @@
 snow
 snow/*
 
-
+# Settings or config
+settings
+settings.py
 
 config
 config.py
