@@ -14,6 +14,9 @@ conn = snc.connect(
 # conn.cursor().execute("CREATE WAREHOUSE IF NOT EXISTS tiny_warehouse_mg")
 # conn.cursor().execute("CREATE DATABASE IF NOT EXISTS testdb")
 conn.cursor().execute("USE DATABASE testdb")
+# conn.cursor().execute(
+#     "CREATE OR REPLACE TABLE "
+#     "test_table(col1 integer, col2 string)")
 conn.cursor().execute(
-    "CREATE OR REPLACE TABLE "
-    "test_table(col1 integer, col2 string)")
+    "INSERT INTO test_table(col1, col2) "
+    "VALUES(123, 'test string1'),(456, 'test string2')")
