@@ -17,6 +17,8 @@ conn.cursor().execute("USE DATABASE testdb")
 # conn.cursor().execute(
 #     "CREATE OR REPLACE TABLE "
 #     "test_table(col1 integer, col2 string)")
-conn.cursor().execute(
-    "INSERT INTO test_table(col1, col2) "
-    "VALUES(123, 'test string1'),(456, 'test string2')")
+# conn.cursor().execute(
+#     "INSERT INTO test_table(col1, col2) "
+#     "VALUES(123, 'test string1'),(456, 'test string2')")
+col1, col2 = conn.cursor().execute("SELECT col1, col2 FROM test_table").fetchone()
+print('{0}, {1}'.format(col1, col2))
